@@ -4,20 +4,39 @@
   </head>
   <body>
     <a-scene>
+      <a-entity>
         <a-box color="grey" depth="5" height="3.5" width="2.5"></a-box>
-        <a-octahedron color="#FF926B" radius=".75" position="-1.5 0.5 -1"></a-octahedron>
-        <a-octahedron color="#FF926B" radius=".75" position="-1.5 0.5 +1"></a-octahedron>
-        <a-octahedron color="#FF926B" radius=".75" position="1.5 0.5 -1"></a-octahedron>
-        <a-octahedron color="#FF926B" radius=".75" position="1.5 0.5 +1"></a-octahedron>
+        <a-cylinder color="black" radius=".8" position="-1.25 0.5 -1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-cylinder color="black" radius=".8" position="-1.25 0.5 +1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-cylinder color="black" radius=".8" position="1.25 0.5 -1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-cylinder color="black" radius=".8" position="1.25 0.5 +1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-box color="grey" depth="2" height="0.15" width="4.5" position="0 1.80 0" rotation="0 90 0"></a-box>
+        <a-sphere color="#CCC" radius=".5" position="-1.25 0.5 -1"></a-sphere>
+        <a-sphere color="#CCC" radius=".5" position="-1.25 0.5 +1"></a-sphere>
+        <a-sphere color="#CCC" radius=".5" position="1.25 0.5 -1"></a-sphere>
+        <a-sphere color="#CCC" radius=".5" position="1.25 0.5 +1"></a-sphere>
+</a-entity>
+<a-entity position="-5 0 0">
+        <a-box color="grey" depth="5" height="3.5" width="2.5"></a-box>
+        <a-cylinder color="black" radius=".8" position="-1.25 0.5 -1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-cylinder color="black" radius=".8" position="-1.25 0.5 +1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-cylinder color="black" radius=".8" position="1.25 0.5 -1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-cylinder color="black" radius=".8" position="1.25 0.5 +1" rotation="90 90 0" height="0.5"></a-cylinder>
+        <a-box color="grey" depth="2" height="0.15" width="4.5" position="0 1.80 0" rotation="0 90 0"></a-box>
+        <a-sphere color="#CCC" radius=".5" position="-1.25 0.5 -1"></a-sphere>
+        <a-sphere color="#CCC" radius=".5" position="-1.25 0.5 +1"></a-sphere>
+        <a-sphere color="#CCC" radius=".5" position="1.25 0.5 -1"></a-sphere>
+        <a-sphere color="#CCC" radius=".5" position="1.25 0.5 +1"></a-sphere>
+</a-entity>
     
 
 
 
 
 
-
+      
       <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" src="Pic.jpg"></a-plane>
-      <a-sky src="Pic.jpg" repeat="10 10" #ECECEC"></a-sky>
+      <a-sky src="reference.png" repeat="10 10" #ECECEC"></a-sky>
       <a-camera position="0 1.3 4"></a-camera>
     </a-scene>
   </body>
