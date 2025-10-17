@@ -21,7 +21,11 @@ window.addEventListener("DOMContentLoaded",function() {
    
    //Task 4: Use the createHouse(...)  to add several houses to the scene at various positions.
    
-    createHouse(0,0,-1);
+   for(let i = 0; i < 10; i++){
+    let x = rnd(-20,20);
+    let z = rnd(-20,20);
+    createHouse(x,0,z);
+  }
   
 })
 
@@ -68,19 +72,48 @@ function createHouse(x, y, z){
   let house = document.createElement("a-entity");
   
   let wall = document.createElement("a-box");
-  wall.setAttribute("width","0.1");
-  wall.setAttribute("depth","5");
-  wall.setAttribute("height","4");
-  wall.setAttribute("positon","-1 0.5 0")
+  wall.setAttribute("width","4");
+  wall.setAttribute("depth","0.1");
+  wall.setAttribute("height","3");
+  wall.setAttribute("position","0 1.5 2")
   house.append( wall );
 
   let wall2 = document.createElement("a-box");
-  wall2.setAttribute("width","0.1");
-  wall2.setAttribute("depth","5");
-  wall2.setAttribute("height","4");
-  wall2.setAttribute("positon","-1 0.5 0")
-  wall2.setAttribute("rotation","-1 0.5 0")
+  wall2.setAttribute("width","4");
+  wall2.setAttribute("depth","0.1");
+  wall2.setAttribute("height","3");
+  wall2.setAttribute("position","0 1.5 -2")
   house.append( wall2 );
+
+  let wall3 = document.createElement("a-box");
+  wall3.setAttribute("width","0.1");
+  wall3.setAttribute("depth","4");
+  wall3.setAttribute("height","3");
+  wall3.setAttribute("position","-2 1.5 0")
+  house.append( wall3 );
+
+  let wall4 = document.createElement("a-box");
+  wall4.setAttribute("width","0.1");
+  wall4.setAttribute("depth","4");
+  wall4.setAttribute("height","3");
+  wall4.setAttribute("position","2 1.5 0")
+  house.append( wall4 );
+
+ let wall5 = document.createElement("a-box");
+  wall5.setAttribute("width","4");
+  wall5.setAttribute("depth","4");
+  wall5.setAttribute("height","0.1");
+  wall5.setAttribute("position","0 3 0") 
+  house.append( wall5 );
+
+  let door = document.createElement("a-box");
+  door.setAttribute("width","1.5");    
+  door.setAttribute("depth","0.5"); 
+  door.setAttribute("height","2");   
+  door.setAttribute("position","0 1 1.9");
+  door.setAttribute("color", "saddlebrown");
+  house.append( door );
+
 
 
   house.setAttribute("position",{x:x, y:y, z:z});
