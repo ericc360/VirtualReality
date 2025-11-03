@@ -11,12 +11,12 @@ class Rocket{
     let body = document.createElement("a-cylinder");
     body.setAttribute("radius","1");
     body.setAttribute("height","4.5");
-    body.setAttribute("color","grey");
+    body.setAttribute("color", "black");
     this.obj.append( body );
   
     let head = document.createElement("a-cone");
     head.setAttribute("position","0 3.25 0");
-    head.setAttribute("color","red");
+    head.setAttribute("color", "darkred");
     head.setAttribute("radius-bottom","1");
     head.setAttribute("radius-top","0.1");
     head.setAttribute("height","2");
@@ -27,7 +27,7 @@ class Rocket{
     thruster.setAttribute("radius", "0.75");
     thruster.setAttribute("radius-tubular", "0.15");
     thruster.setAttribute("rotation", "90 0 0");
-    thruster.setAttribute("color", "black");
+    thruster.setAttribute("color", "silver");
     this.obj.append( thruster );
 
   let flame = document.createElement("a-cone");
