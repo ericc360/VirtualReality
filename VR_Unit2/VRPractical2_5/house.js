@@ -37,14 +37,6 @@ class House{
   wall5.setAttribute("position","0 3 0") 
   this.obj.append( wall5 );
 
-  let door = document.createElement("a-box");
-  door.setAttribute("width","1.5");    
-  door.setAttribute("depth","0.5"); 
-  door.setAttribute("height","2");   
-  door.setAttribute("position","0 1 1.9");
-  door.setAttribute("color", "saddlebrown");
-  this.obj.append( door );
-  
     this.obj.setAttribute("position",{x:x, y:y, z:z});
     scene.append( this.obj )
   }
