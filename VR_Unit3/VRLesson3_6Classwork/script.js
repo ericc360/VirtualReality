@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded",function() {
   camera = document.querySelector("a-camera");
   gem = document.getElementById("gem");
 
-
+  this.window.addEventListener()
   /*
     Challenge 1
     Add an eventlistener that associates user pressing the keys with the following actions.
@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded",function() {
     6) Rotate the gem in the negatively on the y-axis
     Note: Copy and paste!
   */
+;}
 
   /*  Challenge 2
      When the user clicks in the window, resets the gem rotation to (0,0,0)

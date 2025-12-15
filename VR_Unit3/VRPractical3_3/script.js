@@ -5,6 +5,15 @@ window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
 
+  window.addEventListener("click", function(){
+    let x = camera.object3D.position.x;
+    let z = camera.object3D.position.z;
+    new Snowman(x,z);
+  }
+
+)
+  }
+
   window.addEventListener("keydown",function(e){
     //User can only fire with they press the spacebar and have sufficient ammo
     if(e.key == " " && ammo_count > 0  ){

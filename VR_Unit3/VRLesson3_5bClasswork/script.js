@@ -21,7 +21,11 @@ function loop(){
      Go through the potholes array.  If the distance between you and a 
      pothole is less than 1.7, set the camera's drop variable to true. 
   */
-  if(distance(camera.obj,potholes.obj)<1.7){
+   for(let pothole of Potholes){
+    pothole.launch();
+    if(distance(cone.obj,camera) < 1){
+      cone.fire = true;
+    }
     
   }
   if(camera.drop){
