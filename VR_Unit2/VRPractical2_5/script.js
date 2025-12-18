@@ -11,23 +11,38 @@
 */
 
 let maze = [
-  "-------------------------------------",
-  "--------------------------------------",
-  "-------------xxxxxxxxxxxxxxxxxxxx----",
-  "------------x-----------s--------x-----",
-  "-------------x---------s--------x-------",
-  "--------------x----c-----------x--------",
-  "---------------x---c----------x---------",
-  "----------------x--c---------x----------",
-  "-----------------x-x-x-x-x-x----------------",
-  "--------------------------------------",
-  "--------------------------------------",
-  "--------------------------------------",
+  "xxxxxxxxxxxxxxxxxxxxxxxxx",
+  "x---------------------x-x",
+  "x--------xxxxxxxxxxxxxxxx",
+  "x----x----x------------xx",
+  "x-----x----x----s-----x-x",
+  "xxx----x----x-s----s-x--x",
+  "x-----x-----------------x",
+  "x-s--x------------------x",
+  "x----x--s---------------x",
+  "xxx---x-----------------x",
+  "x-----------------------x",
+  "x-----xxxxxxxxxxx-s-----x",
+  "x--------x-------x------x",
+  "x------s-x-s------------x",
+  "x--------x--------------x",
+  "x--------xxxxxxxxxxx----x",
+  "x--------s---x----------x",
+  "x------------x-s--------x",
+  "x-s----------x------x---x",
+  "x------------x--------s-x",
+  "x----s-------xxx----xxxxx",
+  "x-------------------x---x",
+  "xxxxxxx-------------x-s-x",
+  "------x-------------x---x",
+  "--------------s---------x",
+  "-----------s------------x",
+  "xxxxxxxxxxxxxxxxxxxxxxxxx",
+  
+  
 ];
 
-/* Challenge 2
-   Add appropriate classes to use as objects in your map.  Choose characters to represent these objects and position them on the map.   In Challenge 5 and 6, you will generate the map using the character representation of the objects you chose to place in the world. Get Creative!
-*/
+
 
 let scene;
 
@@ -38,10 +53,10 @@ window.addEventListener("DOMContentLoaded",function() {
     let cols = row.split("");
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "x"){
-        new House(c,0,r)
+        new House((c-12.5)*2,0,(r-12.5)*2)
       }
       else if(cols[c] == "s"){
-        new Snowman(c,0,r)
+        new Snowman((c-12.5)*2,(r-12.5)*2)
       }
       
     }
