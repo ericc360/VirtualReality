@@ -6,7 +6,7 @@ class amboxes{
     this.checkrt=true;
     
     this.obj = document.createElement("a-box")
-    this.obj.setAttribute("color", "green");
+    this.obj.setAttribute("color", "lightgreen");
     this.obj.setAttribute("position",{x:x,y:2,z:z});
     this.obj.setAttribute("rotation",{x:0,y:rotation,z:0});
     scene.append(this.obj);
