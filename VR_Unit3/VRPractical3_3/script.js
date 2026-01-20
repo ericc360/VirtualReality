@@ -1,6 +1,6 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
 let scene, camera, bullet, bulletlist = [], enemies = [], ammo_boxes = [], ammo_count = 30, enemy_killed = 0;
-let x, z, radial, rotation, etika=0, matria=0, ammorefill=false, timer=0;
+let x, z, b, a, radial, rotation, etika=0, matria=0, ammorefill=false, timer=0;
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
@@ -35,6 +35,22 @@ window.addEventListener("DOMContentLoaded",function() {
       argyle = new amboxes(x, z, rotation-90);
     }
     ammo_boxes.push(argyle);
+  }
+  for(let i=0; i<256; i++){
+    if(i<64){
+      b = rnd(-40, -20);
+      a = rnd(-90, 90);
+    } else if(i>=64&&i<128){
+      b = rnd(40, 20);
+      a = rnd(-90, 90);
+    } else if(i>=128&&i<192){
+      b = rnd(-90, 90);
+      a = rnd(-40, -20);
+    } else if(i>=192&&i<256){
+      b = rnd(-90, 90);
+      a = rnd(40, 20);
+    }
+    forest = new Tree(b, 0, a);
   }
   
   setInterval(loop,100);
@@ -90,7 +106,7 @@ function gunning(){
         ammos.killed = true
       }
       if(ammos.killed==true &&ammos.checkrt==true){
-          ammo_count+=30;
+          ammo_count+=15;
           ammos.checkrt =false;
         }
     }
@@ -106,12 +122,12 @@ function countdown(){
   } else if(enemy_killed>=24){
     time.setAttribute("value", "Time: GAME OVER BUT YOU WIN")
   }else {
-    time.setAttribute("value", "Time: " + timer)
+    time.setAttribute("value", "Time: " + timer +"/120")
   }
 }
 function guncount(){
   ammo.setAttribute("value", "Ammo: " + ammo_count);
-  dead.setAttribute("value", "Dead: " + enemy_killed);
+  dead.setAttribute("value", "Dead: " + enemy_killed +"/24");
 }
 
 function distance(obj1,obj2){
