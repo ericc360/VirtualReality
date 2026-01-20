@@ -3,6 +3,7 @@ class Snowman{
     this.a = 0;
     this.da = 1;
     this.killed=false;
+    this.checkrt=true;
     
     this.obj = document.createElement("a-entity")
     for(let i = 0; i < 3; i++){

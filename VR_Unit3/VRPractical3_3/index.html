@@ -4,6 +4,7 @@
     <script src="snowman.js"></script>
     <script src="bullet.js"></script>
     <script src="script.js"></script>
+    <script src="ammoboxing.js"></script>
   </head>
   <body>
     <a-scene>
@@ -11,8 +12,10 @@
       <a-sky color="#ECECEC"></a-sky>
       <a-camera position="0 1.6 0" wasd-controls-enabled="false">
         <a-cursor>
-          <a-text value = "Time: " position="-2.5 1 -1" id="time" color="black"></a-text>
-          <a-text value = "Ammo: " position="-2.5 .8 -1" id="ammo"color="black"></a-text>
+          <a-text value = "Time: " position="-2.5 1.4 -1" id="time" color="black"></a-text>
+          <a-text value = "Ammo: " position="-2.5 1.2 -1" id="ammo"color="black"></a-text>
+          <a-text value = "Dead: " position="-2.5 1.0 -1" id="dead"color="black"></a-text>
+          <a-text value = "hold [Space] to shoot " position="-2.5 -1.4 -1" id="mood"color="black"></a-text>
         </a-cursor>
       </a-camera>
     </a-scene>
