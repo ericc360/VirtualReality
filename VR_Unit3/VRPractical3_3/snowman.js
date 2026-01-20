@@ -1,7 +1,8 @@
 class Snowman{
-  constructor(x,z){
+  constructor(x,z, rotation){
     this.a = 0;
     this.da = 1;
+    this.killed=false;
     
     this.obj = document.createElement("a-entity")
     for(let i = 0; i < 3; i++){
@@ -35,10 +36,17 @@ class Snowman{
       this.obj.append(arm)
     }
     this.obj.setAttribute("position",{x:x,y:0,z:z});
+    this.obj.setAttribute("rotation",{x:0,y:rotation,z:0});
     scene.append(this.obj);
+    
   }
-  spin(){
+  trace(x, z, rotation){
     this.a += this.da;
     this.obj.setAttribute("rotation",{x:0, y:this.a, z:0});
+    if(this.killed){
+      this.obj.setAttribute("position",{x:x, y:-7, z:z});
+    } else {
+      this.obj.setAttribute("position",{x:x, y:0, z:z});
+    }
   }
 }

@@ -7,12 +7,12 @@
   </head>
   <body>
     <a-scene>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="200" height="200" src="snow.webp" repeat="60 60"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
-      <a-camera position="0 1.6 0">
+      <a-camera position="0 1.6 0" wasd-controls-enabled="false">
         <a-cursor>
-          <a-text value = "Time: " position="-3 1 -1" color="black"></a-text>
-          <a-text value = "Ammo: " position="2 1 -1" color="red"></a-text>
+          <a-text value = "Time: " position="-2.5 1 -1" id="time" color="black"></a-text>
+          <a-text value = "Ammo: " position="-2.5 .8 -1" id="ammo"color="black"></a-text>
         </a-cursor>
       </a-camera>
     </a-scene>

@@ -3,18 +3,13 @@ class Rocket{
     this.x = x;
     this.y = y;
     this.z = z;
-    this.speed = Math.random() * 0.2 + 0.05;
+    this.speed = 0.5;
     this.launch = false;
 
-    this.obj.addeventlistener("mouseenter",()=>{
-      this.launch = true;
-    });
-    this.obj.addeventlistener("mouseenter",()=>{
-      this.launch = true;
-    });
+
     this.obj = document.createElement("a-entity");
     this.obj.setAttribute("position", { x: this.x, y: this.y, z: this.z });
-  
+
     let body = document.createElement("a-cylinder");
     body.setAttribute("radius","1");
     body.setAttribute("height","4.5");
@@ -37,22 +32,26 @@ class Rocket{
     thruster.setAttribute("color", "silver");
     this.obj.append( thruster );
 
-  let flame = document.createElement("a-cone");
-  flame.setAttribute("position", "0 -3 0");
-  flame.setAttribute("radius-bottom", "0.5");
-  flame.setAttribute("radius-top", "0");
-  flame.setAttribute("height", "1");
-  flame.setAttribute("color", "orange");
-  this.obj.append(flame);
+    let flame = document.createElement("a-cone");
+    flame.setAttribute("position", "0 -3 0");
+    flame.setAttribute("radius-bottom", "0.5");
+    flame.setAttribute("radius-top", "0");
+    flame.setAttribute("height", "1");
+    flame.setAttribute("color", "orange");
+    this.obj.append(flame);
     
+    this.obj.addEventListener("mouseenter",()=>{
+      this.launch = true;
+    });
+
     scene.append(this.obj);
   
   }
 
   update(){
     if(this.launch){
-    this.y += this.speed;
-    this.obj.setAttribute("position", { x: this.x, y: this.y, z: this.z });
+      this.y += this.speed;
+      this.obj.setAttribute("position", { x: this.x, y: this.y, z: this.z });
     }
     
   }
